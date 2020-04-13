@@ -5,6 +5,7 @@ const geocode = require('./utilis/geocode')
 const forecast = require('./utilis/forecast')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // console.log(__dirname)
 // console.log(path.join(__dirname));
@@ -23,7 +24,7 @@ app.use(express.static(publicDirectory)); //setup static directory to server
 app.get('', (req, res) => {
     res.render('index', {
         title : 'Weather',
-        name : 'sth'
+        name : 'Weather App'
     })
 })
 
@@ -31,7 +32,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title : 'Help',
         helpText : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        name : 'sth'
+        name : 'Weather App'
     })
 })
 
@@ -39,14 +40,14 @@ app.get('/help/*', (req,res) => { //404Page
     res.render('error', {
         title : '404 ERROR',
         errorMessage : 'Help article is not found',
-        name : 'sth'
+        name : 'Weather App'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title : 'About app',
-        name : 'sth'
+        name : 'Weather App'
     })
 })
 
@@ -81,12 +82,12 @@ app.get('/weather', (req, res) => {
 app.get('*', (req,res) => { //404Page
     res.render('error', {
         title : '404 ERROR',
-        errorMessage : 'This page is not found',
-        name : 'sth'
+        errorMessage : 'This page is not found you may use something from the menu up above..',
+        name : 'Weather App'
     })
 })
 
-app.listen(3000, () => {
-    console.log("Server is up");
+app.listen(port, () => {
+    console.log("Server is up on " + port);
     
 })
