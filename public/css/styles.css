@@ -1,7 +1,7 @@
 body {
     color: #EEE;
     /* font-family: Arial; */
-    max-width: 1300px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 16px;
 
@@ -26,16 +26,16 @@ header a {
     color : #AAA;
     margin-right: 18px;
     text-decoration: none;
-    font-size: 27px;
+    font-size: 23px;
 }
 
 img.portrait {
-    width: 240px;
+    width: 200px;
 }
 p{
     font-size: 25px;
     color: #CCC;
-    margin: 35px 0;
+    margin: 20px 0;
 }
 
 
@@ -53,6 +53,7 @@ form button {
     color: white;
     padding: 15px;
     font-size: 20px;
+    margin-left: 15px;
 }
 form button:hover{background-color:#87112d}
 
@@ -72,4 +73,5 @@ footer {
 }
 footer p{
     margin-top: 0;
+    margin-bottom: 0;
 }
