@@ -10,7 +10,6 @@ weatherForm.addEventListener('submit', (e) => {
     messageOne.textContent = 'Loading...'
 
     const location = search.value;
-    // console.log(location);
 
     const url = 'http://localhost:3000/weather?address=' + location
     fetch(url).then((response) => {    //extract data from the url then run this function
